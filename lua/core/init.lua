@@ -1,5 +1,5 @@
-require('cmoloko.set')
-require('cmoloko.remap')
+require('core.set')
+require('core.remap')
 -- Load Lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -16,4 +16,4 @@ end
 vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader=" " -- Mapping space as the leading key
 
-require("lazy").setup('cmoloko.plugin')
+require("lazy").setup("core.plugins")

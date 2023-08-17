@@ -1,1 +1,1 @@
-require("cmoloko")
+require("core")
