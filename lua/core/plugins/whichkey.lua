@@ -10,13 +10,10 @@ return {
         f = {
           name = "+file",
           f = { "<cmd>Telescope find_files<cr>", "Find File" },
+          g = { "<cmd>Telescope git_files<cr>", "Find Git File" },
           r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
           n = { "<cmd>enew<cr>", "New File" },
         },
-       g = {
-        name = "+git",
-          f = {"<cmd>Telescope git_files<cr>", "Search [G]it [F]iles"},
-       },
       h = {
       name = "harpoon",
       a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "add file" },
@@ -27,6 +24,7 @@ return {
       ["1"] = { "<cmd> lua require('harpoon.ui').nav_file(1)<cr>", "file 1" },
       ["2"] = { "<cmd> lua require('harpoon.ui').nav_file(2)<cr>", "file 2" },
       ["3"] = { "<cmd> lua require('harpoon.ui').nav_file(3)<cr>", "file 3" },
+      ["4"] = { "<cmd> lua require('harpoon.ui').nav_file(4)<cr>", "file 4" },
       },
       H = {
           name = "help/debug/conceal",
