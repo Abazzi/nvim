@@ -40,6 +40,10 @@ return {
               n = { ":=vim.treesitter.get_node():type()<cr>", "show node" },
           },
       },
+      e = {
+        name = "viewing errors",
+        e = {"<cmd> lua vim.diagnostic.open_float(0,{scope='line'})<cr>", "show error"},
+      },
       }
     },opts)
   end,
