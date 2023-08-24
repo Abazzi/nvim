@@ -13,6 +13,7 @@ return {
           g = { "<cmd>Telescope git_files<cr>", "Find Git File" },
           r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
           n = { "<cmd>enew<cr>", "New File" },
+          o = {"<cmd>Neotree toggle left<cr>", "Open File Tree"},
         },
       h = {
       name = "harpoon",
@@ -26,6 +27,7 @@ return {
       ["3"] = { "<cmd> lua require('harpoon.ui').nav_file(3)<cr>", "file 3" },
       ["4"] = { "<cmd> lua require('harpoon.ui').nav_file(4)<cr>", "file 4" },
       },
+      e = {"<cmd> lua vim.diagnostic.open_float(0,{scope='line'})<cr>", "show error"},
       H = {
           name = "help/debug/conceal",
           c = {
@@ -40,10 +42,7 @@ return {
               n = { ":=vim.treesitter.get_node():type()<cr>", "show node" },
           },
       },
-      e = {
-        name = "viewing errors",
-        e = {"<cmd> lua vim.diagnostic.open_float(0,{scope='line'})<cr>", "show error"},
-      },
+
       }
     },opts)
   end,
