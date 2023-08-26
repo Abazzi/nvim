@@ -1,10 +1,11 @@
 return {
-  {"Mofiqul/dracula.nvim",
+  "catppuccin/nvim",
   lazy = false,
+  name = "catppuccin",
   priority = 1000,
   config = function ()
-  local dracula = require 'dracula'
-    dracula.setup()
-    vim.cmd.colorscheme 'dracula'
-  end},
+  local cp = require 'catppuccin'
+    cp.setup()
+    vim.cmd.colorscheme 'catppuccin'
+  end,
 }

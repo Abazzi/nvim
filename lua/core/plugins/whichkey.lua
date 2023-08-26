@@ -13,7 +13,6 @@ return {
           g = { "<cmd>Telescope git_files<cr>", "Find Git File" },
           r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
           n = { "<cmd>enew<cr>", "New File" },
-          o = {"<cmd>Neotree toggle left<cr>", "Toggle File Tree"},
         },
       h = {
       name = "harpoon",
@@ -42,7 +41,7 @@ return {
               n = { ":=vim.treesitter.get_node():type()<cr>", "show node" },
           },
       },
-
+      E = {"<cmd>Explore<cr>", "Open netrw"},
       }
     },opts)
   end,
