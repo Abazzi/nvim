@@ -42,6 +42,8 @@ return {
           },
       },
       E = {"<cmd>Explore<cr>", "Open netrw"},
+      db = {"<cmd>DapToggleBreakPoint<cr>", "Debugger: Add Breakpoint at line"},
+      dr = {"<cmd> DapContinue<cr>", "Run or continue the debugger"},
       },
     },opts)
   end,

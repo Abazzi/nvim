@@ -6,6 +6,6 @@ return {
   config = function ()
   local cp = require 'catppuccin'
     cp.setup()
-    vim.cmd.colorscheme 'catppuccin'
+    vim.cmd.colorscheme 'catppuccin-macchiato'
   end,
 }
