@@ -9,8 +9,7 @@ return {
       ['<leader>'] = {
         f = {
           name = "+file",
-          f = { "<cmd>Telescope find_files<cr>", "Find File" },
-          g = { "<cmd>Telescope git_files<cr>", "Find Git File" },
+          f = { "<cmd>Telescope git_files<cr>", "Find Git File" },
           r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
           n = { "<cmd>enew<cr>", "New File" },
         },
@@ -42,7 +41,7 @@ return {
           },
       },
       E = {"<cmd>Explore<cr>", "Open netrw"},
-      db = {"<cmd>DapToggleBreakPoint<cr>", "Debugger: Add Breakpoint at line"},
+      db = {"<cmd>DapToggleBreakpoint<cr>", "Debugger: Add Breakpoint at line"},
       dr = {"<cmd> DapContinue<cr>", "Run or continue the debugger"},
       },
     },opts)
