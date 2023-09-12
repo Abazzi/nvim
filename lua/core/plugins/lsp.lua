@@ -71,6 +71,7 @@ local servers = {
   rust_analyzer = {},
   eslint = {},
   html = { filetypes = { 'html', 'twig', 'hbs'} },
+  cssls = { filetypes = {"css", 'sass', 'scss'} },
 
   lua_ls = {
     Lua = {
