@@ -9,11 +9,13 @@ return {
       ['<leader>'] = {
         f = {
           name = "+file",
-          f = { "<cmd>Telescope git_files<cr>", "Find Git File" },
+          g = { "<cmd>Telescope git_files<cr>", "Find Git File" },
+          f = { "<cmd>Telescope find_files<cr>", "Find File" },
+          s = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
           r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
           n = { "<cmd>enew<cr>", "New File" },
         },
-       ['<leader>'] ={
+       h ={
           name = "harpoon",
           a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "add file" },
           r = { "<cmd>lua require('harpoon.mark').rm_file()<cr>", "remove file" },
@@ -40,7 +42,6 @@ return {
               n = { ":=vim.treesitter.get_node():type()<cr>", "show node" },
           },
       },
-      E = {"<cmd>Explore<cr>", "Open netrw"},
       db = {"<cmd>DapToggleBreakpoint<cr>", "Debugger: Add Breakpoint at line"},
       dr = {"<cmd> DapContinue<cr>", "Run or continue the debugger"},
       },
