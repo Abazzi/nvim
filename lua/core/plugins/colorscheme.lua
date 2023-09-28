@@ -1,11 +1,12 @@
 return {
-	"catppuccin/nvim",
+	"Mofiqul/dracula.nvim",
+	version = false,
 	lazy = false,
-	name = "catppuccin",
-	priority = 1000,
+	priority = 1000, -- make sure to load this before all the other start plugins
+	-- Optional; default configuration will be used if setup isn't called.
 	config = function()
-		local cp = require("catppuccin")
-		cp.setup()
-		vim.cmd.colorscheme("catppuccin-macchiato")
+		require("dracula").setup({
+			vim.cmd([[colorscheme dracula]]),
+		})
 	end,
 }
