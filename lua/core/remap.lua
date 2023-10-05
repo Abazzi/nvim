@@ -1,6 +1,4 @@
 vim.g.mapleader = " "
--- Remap for Escape key
-vim.keymap.set("i", "jj", "<Esc>")
 
 -- Copy and Paste to clipboard keymaps
 vim.keymap.set("n", "<leader>y", '"+y')
