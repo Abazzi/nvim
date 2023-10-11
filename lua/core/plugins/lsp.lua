@@ -73,6 +73,7 @@ return {
       html = { filetypes = { 'html', 'twig', 'hbs' } },
       cssls = { filetypes = { "css", 'sass', 'scss' } },
 
+
       lua_ls = {
         Lua = {
           workspace = { checkThirdParty = false },
