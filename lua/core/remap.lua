@@ -58,30 +58,30 @@ keybind("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>", { desc = "Debugger: A
 keybind("n", "<leader>db", "<cmd>DapContinue<cr>", { desc = "Run or continue the debugger" })
 
 -- Trouble Keybinds
-keybind("n", "<leader>xx", "<cmd><lua require('trouble').open()<cr>", { desc = "Open Trouble" })
-keybind(
-	"n",
-	"<leader>xw",
-	"<cmd><lua require('trouble').open('Workspace_diagnostics')<cr>",
-	{ desc = "Workspace Diagnostics" }
-)
-keybind(
-	"n",
-	"<leader>xd",
-	"<cmd><lua require('trouble').open('document_diagnostics')<cr>",
-	{ desc = "Document Diagnostics" }
-)
-keybind("n", "<leader>xq", "<cmd><lua require('trouble').open('quickfix')<cr>", { desc = "Quickfix Menu" })
-keybind("n", "<leader>xR", "<cmd><lua require('trouble').open('lsp_references')<cr>", { desc = "LSP References" })
-keybind(
-	"n",
-	"<leader>xn",
-	"<cmd><lua require('trouble').next({skip_groups = true, jump = true})<cr>",
-	{ desc = "Next Item" }
-)
-keybind(
-	"n",
-	"<leader>xn",
-	"<cmd><lua require('trouble').previous({skip_groups = true, jump = true})<cr>",
-	{ desc = "Previous Item" }
-)
+keybind("n", "<leader>xx", function()
+	require("trouble").open()
+end, { desc = "Open Trouble" })
+
+keybind("n", "<leader>xw", function()
+	require("trouble").open("workspace_diagnostics")
+end, { desc = "Workspace Diagnostics" })
+
+keybind("n", "<leader>xd", function()
+	require("trouble").open("document_diagnostics")
+end, { desc = "Document Diagnostics" })
+
+keybind("n", "<leader>xq", function()
+	require("trouble").open("quickfix")
+end, { desc = "Quickfix Menu" })
+
+keybind("n", "<leader>xR", function()
+	require("trouble").open("lsp_references")
+end, { desc = "LSP References" })
+
+keybind("n", "<leader>xn", function()
+	require("trouble").next({ skip_groups = true, jump = true })
+end, { desc = "Next Item" })
+
+keybind("n", "<leader>xp", function()
+	require("trouble").previous({ skip_groups = true, jump = true })
+end, { desc = "Previous Item" })

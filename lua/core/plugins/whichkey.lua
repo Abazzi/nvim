@@ -11,7 +11,7 @@ return {
 					name = "+file",
 				},
 				h = {
-					name = "harpoon",
+					name = "+harpoon",
 				},
 				g = {
 					name = "+git",
@@ -26,7 +26,7 @@ return {
 					name = "+treesitter",
 				},
 				d = {
-					name = "DAP",
+					name = "+DAP",
 				},
 				x = {
 					name = "+trouble",
