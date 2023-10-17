@@ -8,7 +8,7 @@ return {
 		wk.register({
 			["<leader>"] = {
 				f = {
-					name = "+file",
+					name = "+telescope",
 				},
 				h = {
 					name = "+harpoon",
