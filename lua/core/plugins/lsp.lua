@@ -84,7 +84,6 @@ return {
 
     -- Setup neovim lua configuration
     require('neodev').setup()
-
     -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
@@ -114,7 +113,7 @@ return {
     require('luasnip.loaders.from_vscode').lazy_load()
     luasnip.config.setup {}
 
-    cmp.setup {
+    cmp.setup({
       snippet = {
         expand = function(args)
           luasnip.lsp_expand(args.body)
@@ -153,6 +152,6 @@ return {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
       },
-    }
+    })
   end
 }
