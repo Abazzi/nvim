@@ -28,9 +28,9 @@ end, { desc = "Find Files" })
 keybind("n", "<leader>fw", function()
   require("telescope.builtin").grep_string()
 end, { desc = "Find Git File" })
-keybind("n", "<leader>fc", function()
+keybind("n", "<leader>gc", function()
   require("telescope.builtin").git_commits()
-end, { desc = "Find Git File" })
+end, { desc = "Telescope: View Git Commits" })
 keybind("n", "<leader>fg", function()
   require("telescope.builtin").git_files()
 end, { desc = "Find Git File" })
@@ -48,9 +48,8 @@ end, { desc = "Show Marks" })
 keybind("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
 
 -- Fugitive Keybinds
-keybind("n", "<leader>gh", "<cmd>G<cr>", { desc = "Open in Horizontal Window Split" })
-keybind("n", "<leader>gv", "<cmd>vertical G<cr>", { desc = "Open in Vertical Window Split" })
-keybind("n", "<leader>gl", "<cmd>Git log --oneline<cr>", { desc = "Git Log" })
+keybind("n", "<leader>gh", "<cmd>G<cr>", { desc = "Fugitive: Open Horizontal" })
+keybind("n", "<leader>gv", "<cmd>vertical G<cr>", { desc = "Fugitive: Open Vertical" })
 
 --Help/Debug/Conceal Keybinds
 keybind("n", "<leader>Hch", ":set conceallevel=1<cr>", { desc = "hide/conceal" })
