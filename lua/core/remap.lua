@@ -43,6 +43,9 @@ end, { desc = "Open Recent File" })
 keybind("n", "<leader>fm", function()
   require("telescope.builtin").marks()
 end, { desc = "Show Marks" })
+keybind("n", "<leader>fb", function()
+  require('telescope.builtin').buffers()
+end, { desc = "Find Buffer" })
 
 -- Other file related keybinds
 keybind("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
