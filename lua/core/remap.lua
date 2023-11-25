@@ -136,3 +136,5 @@ keybind("n", "<leader>h3",
   "<cmd>lua require('harpoon.ui').nav_file(3)<cr>"
   , { desc = "Go To File 3" }
 )
+
+keybind("n", "<leader>co", ":CodeActionMenu", { desc = "Code Action Menu" })
