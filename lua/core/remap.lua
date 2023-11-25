@@ -137,4 +137,7 @@ keybind("n", "<leader>h3",
   , { desc = "Go To File 3" }
 )
 
-keybind("n", "<leader>co", ":CodeActionMenu", { desc = "Code Action Menu" })
+keybind("n", "<leader>co", function()
+  require('code_action_menu').open_code_action_menu()
+end, { desc = "Code Action Menu" })
+
