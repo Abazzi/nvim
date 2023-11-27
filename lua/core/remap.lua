@@ -20,10 +20,10 @@ end, { silent = true, noremap = true, desc = "toggle signature" })
 
 -- Telescope  keybinds
 keybind("n", "<leader>fg", function()
-  require("telescope.builtin").git_files()
+  require("telescope.builtin").git_files({ hidden = true })
 end, { desc = "Find Git File" })
 keybind("n", "<leader>ff", function()
-  require("telescope.builtin").find_files()
+  require("telescope.builtin").find_files({ hidden = true })
 end, { desc = "Find Files" })
 keybind("n", "<leader>fw", function()
   require("telescope.builtin").grep_string()
