@@ -8,6 +8,9 @@ keybind("n", "<leader>yy", '"+yy')
 keybind("n", "<leader>Y", '"+Y')
 keybind("n", "<leader>rw", vim.cmd.Ex)
 
+-- Toggle Undotree
+keybind("n", "<F5>", ":UndotreeToggle<CR>", { desc = "Toggle Undotree" })
+
 -- Open Parent Directory in Oil
 keybind("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
