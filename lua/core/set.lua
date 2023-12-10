@@ -10,7 +10,7 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.textwidth = 80
 
 vim.opt.swapfile = false
@@ -29,3 +29,10 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 vim.opt.foldcolumn = '1'
 vim.opt.foldenable = true
+
+vim.opt.ignorecase = true
+vim.opt.inccommand = "split"
+vim.opt.clipboard = "unnamedplus"
+
+vim.opt.scrolloff = 999
+vim.opt.virtualedit = "block"
