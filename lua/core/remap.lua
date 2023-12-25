@@ -115,7 +115,3 @@ keybind("n", "<leader>h1", "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", { d
 keybind("n", "<leader>h2", "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", { desc = "Go To File 2" })
 
 keybind("n", "<leader>h3", "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", { desc = "Go To File 3" })
-
-keybind("n", "<leader>co", function()
-	require("code_action_menu").open_code_action_menu()
-end, { desc = "Code Action Menu" })
