@@ -68,7 +68,6 @@ return {
     --  If you want to override the default filetypes that your language server will attach to you can
     --  define the property 'filetypes' to the map in question.
     local servers = {
-      rust_analyzer = {},
       eslint = { filetypes = { 'ts', 'tsx', 'js', 'jsx', 'json' } },
       html = { filetypes = { 'html', 'twig', 'hbs' } },
       cssls = { filetypes = { "css", 'sass', 'scss' } },
