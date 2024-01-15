@@ -2,8 +2,7 @@
 
 
 ## Installation
-
-Version of Neovim built on: 0.9.0
+Using Neovim 0.9.5
 ```
 $ git clone https://github.com/Abazzi/nvim.git ~/.config/   
 ```
