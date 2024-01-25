@@ -119,3 +119,7 @@ keybind("n", "<leader>h3", "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", { d
 keybind("n", "<leader>h4", "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", { desc = "Go To File 4" })
 
 keybind("n", "<leader>h5", "<cmd>lua require('harpoon.ui').nav_file(5)<cr>", { desc = "Go To File 5" })
+
+-- Neotest Keybinds
+keybind("n", "<leader>tr", "<cmd> lua require('neotest').run.run()<cr>", { desc = "[T]est [R]un" })
+keybind("n", "<leader>dt", "<cmd> lua require('neotest').run.run({strategy = 'dap'})<cr>", { desc = "[D]ebug [T]est" })
