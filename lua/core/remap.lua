@@ -7,7 +7,8 @@ keybind("v", "<leader>y", '"+y')
 keybind("n", "<leader>yy", '"+yy')
 keybind("n", "<leader>Y", '"+Y')
 keybind("n", "<leader>rw", vim.cmd.Ex)
-
+-- Paste without overwriting register
+keybind("v", "p", '"_dP')
 -- Toggle Undotree
 keybind("n", "<F5>", ":UndotreeToggle<CR>", { desc = "Toggle Undotree" })
 
@@ -124,24 +125,13 @@ keybind("n", "<leader>h4", "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", { d
 keybind("n", "<leader>h5", "<cmd>lua require('harpoon.ui').nav_file(5)<cr>", { desc = "Go To File 5" })
 
 -- Run Tests
-vim.keymap.set("n", "<leader>t", "<cmd>lua require('neotest').run.run()<CR>", { desc = "Run Test" })
-vim.keymap.set(
-	"n",
-	"<leader>tf",
-	"<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>",
-	{ desc = "Run Test File" }
-)
-vim.keymap.set(
+keybind("n", "<leader>t", "<cmd>lua require('neotest').run.run()<CR>", { desc = "Run Test" })
+keybind("n", "<leader>tf", "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>", { desc = "Run Test File" })
+keybind(
 	"n",
 	"<leader>td",
 	"<cmd>lua require('neotest').run.run(vim.fn.getcwd())<CR>",
 	{ desc = "Run Current Test Directory" }
-)
-vim.keymap.set(
-	"n",
-	"<leader>tp",
-	"<cmd>lua require('neotest').output_panel.toggle()<CR>",
-	{ desc = "Toggle Test Output Panel" }
-)
-vim.keymap.set("n", "<leader>tl", "<cmd>lua require('neotest').run.run_last()<CR>", { desc = "Run Last Test" })
-vim.keymap.set("n", "<leader>ts", "<cmd>lua require('neotest').summary.toggle()<CR>", { desc = "Toggle Test Summary" })
+)("n", "<leader>tp", "<cmd>lua require('neotest').output_panel.toggle()<CR>", { desc = "Toggle Test Output Panel" })
+keybind("n", "<leader>tl", "<cmd>lua require('neotest').run.run_last()<CR>", { desc = "Run Last Test" })
+keybind("n", "<leader>ts", "<cmd>lua require('neotest').summary.toggle()<CR>", { desc = "Toggle Test Summary" })
