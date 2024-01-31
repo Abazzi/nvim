@@ -52,6 +52,9 @@ end, { desc = "Find Buffer" })
 
 -- Other file related keybinds
 keybind("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
+keybind({ "n" }, "<Leader>k", function()
+	vim.lsp.buf.signature_help()
+end, { silent = true, noremap = true, desc = "toggle signature" })
 
 -- Fugitive Keybinds
 keybind("n", "<leader>gh", "<cmd>G<cr>", { desc = "Fugitive: Open Horizontal" })
@@ -120,6 +123,25 @@ keybind("n", "<leader>h4", "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", { d
 
 keybind("n", "<leader>h5", "<cmd>lua require('harpoon.ui').nav_file(5)<cr>", { desc = "Go To File 5" })
 
--- Neotest Keybinds
-keybind("n", "<leader>tr", "<cmd> lua require('neotest').run.run()<cr>", { desc = "[T]est [R]un" })
-keybind("n", "<leader>dt", "<cmd> lua require('neotest').run.run({strategy = 'dap'})<cr>", { desc = "[D]ebug [T]est" })
+-- Run Tests
+vim.keymap.set("n", "<leader>t", "<cmd>lua require('neotest').run.run()<CR>", { desc = "Run Test" })
+vim.keymap.set(
+	"n",
+	"<leader>tf",
+	"<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>",
+	{ desc = "Run Test File" }
+)
+vim.keymap.set(
+	"n",
+	"<leader>td",
+	"<cmd>lua require('neotest').run.run(vim.fn.getcwd())<CR>",
+	{ desc = "Run Current Test Directory" }
+)
+vim.keymap.set(
+	"n",
+	"<leader>tp",
+	"<cmd>lua require('neotest').output_panel.toggle()<CR>",
+	{ desc = "Toggle Test Output Panel" }
+)
+vim.keymap.set("n", "<leader>tl", "<cmd>lua require('neotest').run.run_last()<CR>", { desc = "Run Last Test" })
+vim.keymap.set("n", "<leader>ts", "<cmd>lua require('neotest').summary.toggle()<CR>", { desc = "Toggle Test Summary" })
