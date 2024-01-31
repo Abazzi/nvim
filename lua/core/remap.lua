@@ -7,7 +7,8 @@ keybind("v", "<leader>y", '"+y')
 keybind("n", "<leader>yy", '"+yy')
 keybind("n", "<leader>Y", '"+Y')
 keybind("n", "<leader>rw", vim.cmd.Ex)
-
+-- Paste without overwriting register
+keybind("v", "p", '"_dP')
 -- Toggle Undotree
 keybind("n", "<F5>", ":UndotreeToggle<CR>", { desc = "Toggle Undotree" })
 
@@ -52,6 +53,9 @@ end, { desc = "Find Buffer" })
 
 -- Other file related keybinds
 keybind("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
+keybind({ "n" }, "<Leader>k", function()
+	vim.lsp.buf.signature_help()
+end, { silent = true, noremap = true, desc = "toggle signature" })
 
 -- Fugitive Keybinds
 keybind("n", "<leader>gh", "<cmd>G<cr>", { desc = "Fugitive: Open Horizontal" })
@@ -120,6 +124,14 @@ keybind("n", "<leader>h4", "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", { d
 
 keybind("n", "<leader>h5", "<cmd>lua require('harpoon.ui').nav_file(5)<cr>", { desc = "Go To File 5" })
 
--- Neotest Keybinds
-keybind("n", "<leader>tr", "<cmd> lua require('neotest').run.run()<cr>", { desc = "[T]est [R]un" })
-keybind("n", "<leader>dt", "<cmd> lua require('neotest').run.run({strategy = 'dap'})<cr>", { desc = "[D]ebug [T]est" })
+-- Run Tests
+keybind("n", "<leader>t", "<cmd>lua require('neotest').run.run()<CR>", { desc = "Run Test" })
+keybind("n", "<leader>tf", "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>", { desc = "Run Test File" })
+keybind(
+	"n",
+	"<leader>td",
+	"<cmd>lua require('neotest').run.run(vim.fn.getcwd())<CR>",
+	{ desc = "Run Current Test Directory" }
+)("n", "<leader>tp", "<cmd>lua require('neotest').output_panel.toggle()<CR>", { desc = "Toggle Test Output Panel" })
+keybind("n", "<leader>tl", "<cmd>lua require('neotest').run.run_last()<CR>", { desc = "Run Last Test" })
+keybind("n", "<leader>ts", "<cmd>lua require('neotest').summary.toggle()<CR>", { desc = "Toggle Test Summary" })
