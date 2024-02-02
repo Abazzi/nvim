@@ -132,6 +132,7 @@ keybind(
 	"<leader>td",
 	"<cmd>lua require('neotest').run.run(vim.fn.getcwd())<CR>",
 	{ desc = "Run Current Test Directory" }
-)("n", "<leader>tp", "<cmd>lua require('neotest').output_panel.toggle()<CR>", { desc = "Toggle Test Output Panel" })
+)
+keybind("n", "<leader>tp", "<cmd>lua require('neotest').output_panel.toggle()<CR>", { desc = "Toggle Test Output Panel" })
 keybind("n", "<leader>tl", "<cmd>lua require('neotest').run.run_last()<CR>", { desc = "Run Last Test" })
 keybind("n", "<leader>ts", "<cmd>lua require('neotest').summary.toggle()<CR>", { desc = "Toggle Test Summary" })
