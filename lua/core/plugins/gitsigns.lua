@@ -1,8 +1,16 @@
 return {
-  'lewis6991/gitsigns.nvim',
+  "lewis6991/gitsigns.nvim",
   config = function()
-    require('gitsigns').setup()
-  end
+    require("gitsigns").setup({
+      on_attach = function(bufnr)
+        local gs = package.loaded.gitsigns
+
+        local function map(mode, l, r, opts)
+          opts = opts or {}
+          opts.buffer = bufnr
+          vim.keymap.set(mode, l, r, opts)
+        end
+
         -- Navigation
         map("n", "]c", function()
           if vim.wo.diff then
@@ -23,6 +31,7 @@ return {
           end)
           return "<Ignore>"
         end, { expr = true })
+
         -- Actions
         map("n", "<leader>gH", gs.stage_hunk, { desc = "GitSigns state hunk" })
         map("n", "<leader>gR", gs.reset_hunk, { desc = "GitSigns reset hunk" })
@@ -46,4 +55,9 @@ return {
         end, { desc = "GitSigns diffthis" })
         map("n", "<leader>htd", gs.toggle_deleted, { desc = "GitSigns toggle_deleted" })
 
+        -- Text object
+        map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", { desc = "GitSigns select hunk" })
+      end,
+    })
+  end,
 }
