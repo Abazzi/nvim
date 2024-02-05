@@ -58,7 +58,7 @@ keybind({ "n" }, "<Leader>k", function()
 end, { silent = true, noremap = true, desc = "toggle signature" })
 
 -- Fugitive Keybinds
-keybind("n", "<leader>gs", "<cmd>G<cr>", { desc = "Fugitive: Open Horizontal" })
+keybind("n", "<leader>gh", "<cmd>G<cr>", { desc = "Fugitive: Open Horizontal" })
 keybind("n", "<leader>gv", "<cmd>vertical G<cr>", { desc = "Fugitive: Open Vertical" })
 
 --Help/Debug/Conceal Keybinds
