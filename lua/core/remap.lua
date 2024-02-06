@@ -19,46 +19,46 @@ keybind("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 keybind("v", "J", [[:move '>+1<CR>gv=gv]], { silent = true })
 keybind("v", "K", [[:move '<-2<CR>gv=gv]], { silent = true })
 keybind({ "n" }, "<Leader>k", function()
-	vim.lsp.buf.signature_help()
+  vim.lsp.buf.signature_help()
 end, { silent = true, noremap = true, desc = "toggle signature" })
 
 -- Telescope  keybinds
 keybind("n", "<C-f>", function()
-	require("telescope.builtin").find_files({ hidden = true })
+  require("telescope.builtin").find_files({ hidden = true })
 end, { desc = "Find Files" })
 keybind("n", "<leader>gf", function()
-	require("telescope.builtin").git_files({ hidden = true })
+  require("telescope.builtin").git_files({ hidden = true })
 end, { desc = "Find Git Tracked Files" })
 keybind("n", "<C-s>", function()
-	require("telescope.builtin").grep_string()
+  require("telescope.builtin").grep_string()
 end, { desc = "Grep String" })
 keybind("n", "<C-g>", function()
-	require("telescope.builtin").git_commits()
+  require("telescope.builtin").git_commits()
 end, { desc = "Telescope: View Git Commits" })
 keybind("n", "<leader>fg", function()
-	require("telescope.builtin").git_files()
+  require("telescope.builtin").git_files()
 end, { desc = "Find Git File" })
 keybind("n", "<C-l>", function()
-	require("telescope.builtin").live_grep()
+  require("telescope.builtin").live_grep()
 end, { desc = "Live Grep" })
 keybind("n", "<leader>fr", function()
-	require("telescope.builtin").oldfiles()
+  require("telescope.builtin").oldfiles()
 end, { desc = "Open Recent File" })
 keybind("n", "<leader>fm", function()
-	require("telescope.builtin").marks()
+  require("telescope.builtin").marks()
 end, { desc = "Show Marks" })
 keybind("n", "<leader>fb", function()
-	require("telescope.builtin").buffers()
+  require("telescope.builtin").buffers()
 end, { desc = "Find Buffer" })
 
 -- Other file related keybinds
 keybind("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
 keybind({ "n" }, "<Leader>k", function()
-	vim.lsp.buf.signature_help()
+  vim.lsp.buf.signature_help()
 end, { silent = true, noremap = true, desc = "toggle signature" })
 
 -- Fugitive Keybinds
-keybind("n", "<leader>gh", "<cmd>G<cr>", { desc = "Fugitive: Open Horizontal" })
+keybind("n", "<leader>gs", "<cmd>G<cr>", { desc = "Fugitive: Open Horizontal" })
 keybind("n", "<leader>gv", "<cmd>vertical G<cr>", { desc = "Fugitive: Open Vertical" })
 
 --Help/Debug/Conceal Keybinds
@@ -76,31 +76,31 @@ keybind("n", "<leader>db", "<cmd>DapContinue<cr>", { desc = "Run or continue the
 
 -- Trouble Keybinds
 keybind("n", "<leader>xx", function()
-	require("trouble").open()
+  require("trouble").open()
 end, { desc = "Open Trouble" })
 
 keybind("n", "<leader>xw", function()
-	require("trouble").open("workspace_diagnostics")
+  require("trouble").open("workspace_diagnostics")
 end, { desc = "Workspace Diagnostics" })
 
 keybind("n", "<leader>xd", function()
-	require("trouble").open("document_diagnostics")
+  require("trouble").open("document_diagnostics")
 end, { desc = "Document Diagnostics" })
 
 keybind("n", "<leader>xq", function()
-	require("trouble").open("quickfix")
+  require("trouble").open("quickfix")
 end, { desc = "Quickfix Menu" })
 
 keybind("n", "<leader>xR", function()
-	require("trouble").open("lsp_references")
+  require("trouble").open("lsp_references")
 end, { desc = "LSP References" })
 
 keybind("n", "<leader>xn", function()
-	require("trouble").next({ skip_groups = true, jump = true })
+  require("trouble").next({ skip_groups = true, jump = true })
 end, { desc = "Next Item" })
 
 keybind("n", "<leader>xp", function()
-	require("trouble").previous({ skip_groups = true, jump = true })
+  require("trouble").previous({ skip_groups = true, jump = true })
 end, { desc = "Previous Item" })
 
 -- Harpoon Keybinds
@@ -128,10 +128,10 @@ keybind("n", "<leader>h5", "<cmd>lua require('harpoon.ui').nav_file(5)<cr>", { d
 keybind("n", "<leader>t", "<cmd>lua require('neotest').run.run()<CR>", { desc = "Run Test" })
 keybind("n", "<leader>tf", "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>", { desc = "Run Test File" })
 keybind(
-	"n",
-	"<leader>td",
-	"<cmd>lua require('neotest').run.run(vim.fn.getcwd())<CR>",
-	{ desc = "Run Current Test Directory" }
+  "n",
+  "<leader>td",
+  "<cmd>lua require('neotest').run.run(vim.fn.getcwd())<CR>",
+  { desc = "Run Current Test Directory" }
 )
 keybind("n", "<leader>tp", "<cmd>lua require('neotest').output_panel.toggle()<CR>", { desc = "Toggle Test Output Panel" })
 keybind("n", "<leader>tl", "<cmd>lua require('neotest').run.run_last()<CR>", { desc = "Run Last Test" })
