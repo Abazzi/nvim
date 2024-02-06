@@ -33,7 +33,7 @@ return {
         end, { expr = true })
 
         -- Actions
-        map("n", "<leader>sh", gs.stage_hunk, { desc = "GitSigns state hunk" })
+        map("n", "<leader>sh", gs.stage_hunk, { desc = "GitSigns stage hunk" })
         map("n", "<leader>rh", gs.reset_hunk, { desc = "GitSigns reset hunk" })
         map("v", "<leader>sh", function()
           gs.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
