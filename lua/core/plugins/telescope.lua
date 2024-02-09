@@ -5,7 +5,7 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     cmd = "Telescope",
     opts = {
-      file_ignore_patterns = { "node_modules", ".git" },
+      file_ignore_patterns = { "node_modules", "^./%.git/" },
     },
   },
   {

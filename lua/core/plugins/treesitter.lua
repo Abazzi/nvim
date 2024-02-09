@@ -19,6 +19,8 @@ return {
 					"scss",
 					"tsx",
 					"jsonc",
+          "markdown",
+          "markdown-inline",
 				},
 				sync_install = true,
 				auto_install = true,
