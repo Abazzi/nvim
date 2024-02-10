@@ -86,4 +86,10 @@ return {
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
   },
+  {
+    -- Treesitter Keybinds
+    vim.keymap.set("n", "<leader>tt", vim.treesitter.inspect_tree, { desc = "show tree" }),
+    vim.keymap.set("n", "<leader>tc", ":=vim.treesitter.get_captures_at_cursor()<cr>", { desc = "show capture" }),
+    vim.keymap.set("n", "<leader>tn", ":=vim.treesitter.get_node()<cr>", { desc = "show node" })
+  }
 }
