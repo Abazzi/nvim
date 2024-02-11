@@ -22,5 +22,9 @@ return {
       },
     }
     end
-  end
+  end,
+
+  -- DAP keybinds
+  vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>", { desc = "Debugger: Add Breakpoint at line" }),
+  vim.keymap.set("n", "<leader>db", "<cmd>DapContinue<cr>", { desc = "Run or continue the debugger" })
 }
