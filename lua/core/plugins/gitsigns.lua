@@ -31,7 +31,7 @@ return {
 					end)
 					return "<Ignore>"
 				end, { expr = true })
-
+          
 				-- Actions
 				map("n", "<leader>gH", gs.stage_hunk, { desc = "GitSigns stage hunk" })
 				map("n", "<leader>rH", gs.reset_hunk, { desc = "GitSigns reset hunk" })
