@@ -111,5 +111,11 @@ return {
     time_format = "%H:%M",
     -- A map for custom variables, the key should be the variable and the value a function
     substitutions = {},
-  }
+  },
+
+  vim.keymap.set("n", "<leader>oo", '<cmd>:ObsidianOpen<cr>', { desc = "Obsidian: Open File" }),
+  vim.keymap.set("n", "<leader>on", '<cmd>:ObsidianNew<cr>', { desc = "Obsidian: New File" }),
+  vim.keymap.set("n", "<leader>os", '<cmd>:ObsidianSearch<cr>', { desc = "Obsidian: Search" }),
+  vim.keymap.set("n", "<leader>ot", '<cmd>:ObsidianTags<cr>', { desc = "Obsidian: Show Tag Locations" }),
+  vim.keymap.set("n", "<leader>or", '<cmd>:ObsidianRename<cr>', { desc = "Obsidian: Rename Current File" })
 }

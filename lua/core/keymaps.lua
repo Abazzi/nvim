@@ -14,15 +14,19 @@ vim.keymap.set("v", "p", '"_dP')
 vim.keymap.set("v", "J", [[:move '>+1<CR>gv=gv]], { silent = true })
 vim.keymap.set("v", "K", [[:move '<-2<CR>gv=gv]], { silent = true })
 vim.keymap.set({ "n" }, "<Leader>k", function()
-	vim.lsp.buf.signature_help()
+  vim.lsp.buf.signature_help()
 end, { silent = true, noremap = true, desc = "toggle signature" })
 
--- Other file related keybinds
+-- Other file related keymaps
 vim.keymap.set("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
 vim.keymap.set({ "n" }, "<Leader>k", function()
-	vim.lsp.buf.signature_help()
+  vim.lsp.buf.signature_help()
 end, { silent = true, noremap = true, desc = "toggle signature" })
 
---Help/Debug/Conceal Keybinds
+--Help/Debug/Conceal keymaps
 vim.keymap.set("n", "<leader>Hch", ":set conceallevel=1<cr>", { desc = "hide/conceal" })
 vim.keymap.set("n", "<leader>Hcs", ":set conceallevel=0<cr>", { desc = "show/unconceal" })
+
+--Splitting Keymaps
+vim.keymap.set("n", "<leader>sv", "<cmd>:vs<cr>", { desc = "Split Window Vertically" })
+vim.keymap.set("n", "<leader>sh", "<cmd>:sp<cr>", { desc = "Split Window Horizontally" })
