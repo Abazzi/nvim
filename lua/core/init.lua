@@ -1,5 +1,5 @@
 require('core.set')
-require('core.remap')
+require('core.keymaps')
 require('core.helpers')
 
 -- Load Lazy.nvim
