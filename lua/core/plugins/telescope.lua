@@ -9,22 +9,28 @@ return {
     },
   },
   {
-    'nvim-telescope/telescope-ui-select.nvim',
+    "nvim-telescope/telescope-ui-select.nvim",
     config = function()
       -- This is your opts table
-      require("telescope").setup {
+      require("telescope").setup({
         extensions = {
           ["ui-select"] = {
-            require("telescope.themes").get_dropdown {
-
-            }
-          }
-        }
-      }
+            require("telescope.themes").get_dropdown({}),
+          },
+        },
+      })
       -- To get ui-select loaded and working with telescope, you need to call
       -- load_extension, somewhere after setup function:
       require("telescope").load_extension("ui-select")
-    end
+    end,
+  },
+  {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    build =
+    "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+    config = function()
+      require("telescope").load_extension("fzf")
+    end,
   },
   -- Telescope  vim.keymap.sets
   vim.keymap.set("n", "<C-f>", function()
@@ -53,6 +59,5 @@ return {
   end, { desc = "Show Marks" }),
   vim.keymap.set("n", "<leader>fb", function()
     require("telescope.builtin").buffers()
-  end, { desc = "Find Buffer" })
-
+  end, { desc = "Find Buffer" }),
 }
