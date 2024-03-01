@@ -30,3 +30,6 @@ vim.keymap.set("n", "<leader>Hcs", ":set conceallevel=0<cr>", { desc = "show/unc
 --Splitting Keymaps
 vim.keymap.set("n", "<leader>sv", "<cmd>:vs<cr>", { desc = "Split Window Vertically" })
 vim.keymap.set("n", "<leader>sh", "<cmd>:sp<cr>", { desc = "Split Window Horizontally" })
+
+-- Take Screenshot of code with nvim-silicon
+vim.keymap.set("v", "<leader>ss", "<cmd>Silicon<cr>", { desc = "Take Screenshot of Code" })
