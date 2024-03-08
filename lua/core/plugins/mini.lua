@@ -1,24 +1,24 @@
 return {
   {
-    'echasnovski/mini.ai',
-    version = '*',
+    "echasnovski/mini.ai",
+    version = "*",
     config = function()
-      require('mini.ai').setup()
-    end
+      require("mini.ai").setup()
+    end,
   },
   {
-    'echasnovski/mini.basics',
-    version = '*',
+    "echasnovski/mini.basics",
+    version = "*",
     config = function()
-      require('mini.basics').setup({
+      require("mini.basics").setup({
         mappings = {
           basic = true,
           option_toggle_prefix = [[\]],
           windows = true,
           move_with_alt = true,
-        }
+        },
       })
-    end
+    end,
   },
   {
     "echasnovski/mini.comment",
@@ -28,17 +28,17 @@ return {
     end,
   },
   {
-    'echasnovski/mini.indentscope',
-    version = '*',
+    "echasnovski/mini.indentscope",
+    version = "*",
     config = function()
-      require('mini.indentscope').setup()
-    end
+      require("mini.indentscope").setup()
+    end,
   },
   {
-    'echasnovski/mini.pairs',
-    version = '*',
+    "echasnovski/mini.pairs",
+    version = "*",
     config = function()
-      require('mini.pairs').setup()
-    end
-  }
+      require("mini.pairs").setup()
+    end,
+  },
 }
