@@ -12,7 +12,6 @@ return {
 					"vim",
 					"vimdoc",
 					"typescript",
-					"rust",
 					"json",
 					"javascript",
 					"html",
