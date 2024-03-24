@@ -70,8 +70,6 @@ return {
       eslint = { filetypes = { "ts", "tsx", "js", "jsx", "json" } },
       html = { filetypes = { "html", "twig", "hbs" } },
       cssls = { filetypes = { "css", "sass", "scss" } },
-      rust_analyzer = { filetypes = { "rs" } },
-
       lua_ls = {
         Lua = {
           workspace = { checkThirdParty = false },
