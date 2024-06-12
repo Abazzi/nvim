@@ -37,6 +37,9 @@ return {
 				x = {
 					name = "+trouble",
 				},
+				r = {
+					name = "+refactoring",
+				},
 			},
 		}, opts)
 	end,
