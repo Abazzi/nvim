@@ -37,12 +37,12 @@ return {
 		-- Customize prettier args
 		require("conform.formatters.prettier").args = function(ctx)
 			local args = { "--stdin-filepath", "$FILENAME" }
-			local localPrettierConfig = vim.fs.find(".prettierrc.json", {
+			local localPrettierConfig = vim.fs.find(".prettierrc.toml", {
 				upward = true,
 				path = ctx.dirname,
 				type = "file",
 			})[1]
-			local globalPrettierConfig = vim.fs.find(".prettierrc.json", {
+			local globalPrettierConfig = vim.fs.find(".prettierrc.toml", {
 				path = vim.fn.expand("~/dotfiles"),
 				type = "file",
 			})[1]
