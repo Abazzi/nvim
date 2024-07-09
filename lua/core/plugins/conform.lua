@@ -7,25 +7,25 @@ return {
 			lua = { "stylua" },
 			-- Conform will run multiple formatters sequentially
 			-- Use a sub-list to run only the first available formatter
-			javascript = { "eslint_d", "prettierd" },
-			typescript = { "eslint_d", "prettierd" },
-			html = { "prettierd" },
-			scss = { "prettierd" },
-			css = { "prettierd" },
-			markdown = { "prettierd" },
-			json = { "prettierd" },
+			javascript = { "eslint", "prettier" },
+			typescript = { "eslint", "prettier" },
+			html = { "prettier" },
+			scss = { "prettier" },
+			css = { "prettier" },
+			markdown = { "prettier" },
+			json = { "prettier" },
 			sh = { "beautysh" },
 			zsh = { "beautysh" },
 		},
-		format_on_save = function(bufnr)
-			-- Disable autoformat for files in certain path
-			local bufname = vim.api.nvim_buf_get_name(bufnr)
-			if bufname:match("/node_modules/") then
-				return
-			end
-
-			return { timeout_ms = 500, lsp_fallback = true, async = true }
-		end,
+		-- format_on_save = function(bufnr)
+		-- 	-- Disable autoformat for files in certain path
+		-- 	local bufname = vim.api.nvim_buf_get_name(bufnr)
+		-- 	if bufname:match("/node_modules/") then
+		-- 		return
+		-- 	end
+		--
+		-- 	return { timeout_ms = 500, lsp_fallback = true, async = true }
+		-- end,
 		format_after_save = { lsp_fallback = true },
 	},
 	config = function(_, opts)
