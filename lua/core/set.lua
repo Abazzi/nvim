@@ -1,3 +1,7 @@
+-- neovim global options
+vim.g.have_nerd_font = true
+
+-- neovim options
 vim.opt["guicursor"] = ""
 
 vim.opt.nu = true

@@ -22,6 +22,9 @@ return {
 						name = "conceal",
 					},
 				},
+				n = {
+					name = "+files",
+				},
 				o = {
 					name = "+obsidian",
 				},
