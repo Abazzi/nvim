@@ -5,46 +5,26 @@ return {
 		vim.o.timeout = true
 		vim.o.timeoutlen = 300
 		local wk = require("which-key")
-		wk.register({
-			["<leader>"] = {
-				f = {
-					name = "+telescope",
-				},
-				h = {
-					name = "+harpoon",
-				},
-				g = {
-					name = "+git",
-				},
-				H = {
-					name = "+help/debug/conceal",
-					c = {
-						name = "conceal",
-					},
-				},
-				n = {
-					name = "+files",
-				},
-				o = {
-					name = "+obsidian",
-				},
-				t = {
-					name = "+treesitter",
-				},
-				s = {
-					name = "+treesitter: Incremental Selection",
-				},
-				d = {
-					name = "+DAP",
-				},
-				x = {
-					name = "+trouble",
-				},
-				r = {
-					name = "+refactoring",
-				},
+		wk.add({
+			{ "<leader>f", group = "+telescope" },
+			{ "<leader>h", group = "+harpoon" },
+			{ "<leader>g", group = "+git" },
+			{ "<leader>H", group = "+help/debug/conceal" },
+			{ "<leader>n", group = "+files" },
+			{ "<leader>o", group = "+obsidian" },
+			{ "<leader>t", group = "+treesitter" },
+			{ "<leader>f", group = "+DAP" },
+			{ "<leader>x", group = "+trouble" },
+			{ "<leader>r", group = "+refactoring" },
+			{ "<leader>s", group = "+split_window" },
+			{
+				"<leader>b",
+				group = "buffers",
+				expand = function()
+					return require("which-key.extras").expand.buf()
+				end,
 			},
-		}, opts)
+		})
 	end,
 	opts = {
 		-- your configuration comes here
