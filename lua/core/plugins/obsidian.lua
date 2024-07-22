@@ -19,12 +19,21 @@ return {
 	opts = {
 		workspaces = {
 			{
-				name = "Programming Notes",
-				path = "~/vaults/programming-notes",
+				name = "brain",
+				path = "~/brain",
+				overrides = {
+					templates = {
+						date_format = "%Y-%m-%d-%a",
+						time_format = "%H:%M",
+						folder = "templates",
+					},
+				},
 			},
 			{
-				name = "Brain",
-				path = "~/brain",
+				name = "buf-parent",
+				path = function()
+					return assert(vim.fs.dirname(vim.api.nvim_buf_get_name(0)))
+				end,
 			},
 		},
 
@@ -110,7 +119,7 @@ return {
 		},
 	},
 	templates = {
-		subdir = "Templates",
+		subdir = "templates",
 		date_format = "%Y-%m-%d",
 		time_format = "%H:%M",
 		-- A map for custom variables, the key should be the variable and the value a function
@@ -122,4 +131,10 @@ return {
 	vim.keymap.set("n", "<leader>os", "<cmd>:ObsidianSearch<cr>", { desc = "Obsidian: Search" }),
 	vim.keymap.set("n", "<leader>ot", "<cmd>:ObsidianTags<cr>", { desc = "Obsidian: Show Tag Locations" }),
 	vim.keymap.set("n", "<leader>or", "<cmd>:ObsidianRename<cr>", { desc = "Obsidian: Rename Current File" }),
+	vim.keymap.set(
+		"n",
+		"<leader>ont",
+		"<cmd>:ObsidianNewFromTemplate<cr>",
+		{ desc = "Obsidian: Create New File From Template" }
+	),
 }
