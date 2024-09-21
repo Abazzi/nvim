@@ -18,6 +18,7 @@ return {
 					"html",
 					"scss",
 					"tsx",
+					"org",
 					"jsonc",
 					"markdown",
 					"markdown_inline",
