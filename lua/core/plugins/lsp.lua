@@ -70,6 +70,7 @@ return {
 			-- eslintd = { filetypes = { "ts", "tsx", "js", "jsx", "json" } },
 			html = { filetypes = { "html", "twig", "hbs" } },
 			cssls = { filetypes = { "css", "sass", "scss" } },
+			svelte = { filetypes = { "svelte" } },
 
 			lua_ls = {
 				Lua = {

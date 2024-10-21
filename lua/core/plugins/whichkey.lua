@@ -12,7 +12,7 @@ return {
 			{ "<leader>H", group = "+help/debug/conceal" },
 			{ "<leader>n", group = "+files" },
 			{ "<leader>o", group = "+obsidian" },
-			{ "<leader>t", group = "+treesitter" },
+			{ "<leader>t", group = "+testing/treesitter" },
 			{ "<leader>f", group = "+DAP" },
 			{ "<leader>x", group = "+trouble" },
 			{ "<leader>r", group = "+refactoring" },

@@ -13,6 +13,7 @@ return {
 					"vimdoc",
 					"jsdoc",
 					"typescript",
+					"svelte",
 					"json",
 					"javascript",
 					"html",
@@ -89,8 +90,8 @@ return {
 	},
 	{
 		-- Treesitter Keybinds
-		vim.keymap.set("n", "<leader>tt", vim.treesitter.inspect_tree, { desc = "show tree" }),
-		vim.keymap.set("n", "<leader>tc", ":=vim.treesitter.get_captures_at_cursor()<cr>", { desc = "show capture" }),
-		vim.keymap.set("n", "<leader>tn", ":=vim.treesitter.get_node()<cr>", { desc = "show node" }),
+		vim.keymap.set("n", "<leader>tst", vim.treesitter.inspect_tree, { desc = "show tree" }),
+		vim.keymap.set("n", "<leader>tsc", ":=vim.treesitter.get_captures_at_cursor()<cr>", { desc = "show capture" }),
+		vim.keymap.set("n", "<leader>tsn", ":=vim.treesitter.get_node()<cr>", { desc = "show node" }),
 	},
 }
