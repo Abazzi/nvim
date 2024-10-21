@@ -5,43 +5,43 @@ return {
     config = function()
       local configs = require("nvim-treesitter.configs")
 
-      configs.setup({
-        ensure_installed = {
-          "c",
-          "lua",
-          "vim",
-          "vimdoc",
-          "jsdoc",
-          "typescript",
-          "svelte",
-          "json",
-          "javascript",
-          "html",
-          "scss",
-          "tsx",
-          "go",
-          "jsonc",
-          "markdown",
-          "markdown_inline",
-        },
-        sync_install = true,
-        auto_install = true,
-        ignore_install = {},
-        highlight = { enable = true },
-        indent = { enable = true },
-        incremental_selection = {
-          enable = true,
-          keymaps = {
-            init_selection = "<Leader>ss",
-            node_incremental = "<Leader>si",
-            scope_incremental = "<Leader>sc",
-            node_decremental = "<Leader>sd",
-          },
-        },
-        require("nvim-treesitter.configs").setup({
-          textobjects = {
-            select = {
-              enable = true,
+			configs.setup({
+				ensure_installed = {
+					"c",
+					"lua",
+					"vim",
+					"vimdoc",
+					"jsdoc",
+					"typescript",
+					"svelte",
+					"json",
+					"javascript",
+					"html",
+					"scss",
+					"tsx",
+					"org",
+					"jsonc",
+					"markdown",
+					"markdown_inline",
+				},
+				sync_install = true,
+				auto_install = true,
+				ignore_install = {},
+				highlight = { enable = true },
+				indent = { enable = true },
+				incremental_selection = {
+					enable = true,
+					keymaps = {
+						init_selection = "<Leader>ss",
+						node_incremental = "<Leader>si",
+						scope_incremental = "<Leader>sc",
+						node_decremental = "<Leader>sd",
+					},
+				},
+				require("nvim-treesitter.configs").setup({
+					textobjects = {
+						select = {
+							enable = true,
 
               -- Automatically jump forward to textobj, similar to targets.vim
               lookahead = true,
