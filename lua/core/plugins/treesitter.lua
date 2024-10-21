@@ -5,43 +5,43 @@ return {
     config = function()
       local configs = require("nvim-treesitter.configs")
 
-      configs.setup({
-        ensure_installed = {
-          "c",
-          "lua",
-          "vim",
-          "vimdoc",
-          "jsdoc",
-          "typescript",
-          "svelte",
-          "json",
-          "javascript",
-          "html",
-          "scss",
-          "tsx",
-          "go",
-          "jsonc",
-          "markdown",
-          "markdown_inline",
-        },
-        sync_install = true,
-        auto_install = true,
-        ignore_install = {},
-        highlight = { enable = true },
-        indent = { enable = true },
-        incremental_selection = {
-          enable = true,
-          keymaps = {
-            init_selection = "<Leader>ss",
-            node_incremental = "<Leader>si",
-            scope_incremental = "<Leader>sc",
-            node_decremental = "<Leader>sd",
-          },
-        },
-        require("nvim-treesitter.configs").setup({
-          textobjects = {
-            select = {
-              enable = true,
+			configs.setup({
+				ensure_installed = {
+					"c",
+					"lua",
+					"vim",
+					"vimdoc",
+					"jsdoc",
+					"typescript",
+					"svelte",
+					"json",
+					"javascript",
+					"html",
+					"scss",
+					"tsx",
+					"org",
+					"jsonc",
+					"markdown",
+					"markdown_inline",
+				},
+				sync_install = true,
+				auto_install = true,
+				ignore_install = {},
+				highlight = { enable = true },
+				indent = { enable = true },
+				incremental_selection = {
+					enable = true,
+					keymaps = {
+						init_selection = "<Leader>ss",
+						node_incremental = "<Leader>si",
+						scope_incremental = "<Leader>sc",
+						node_decremental = "<Leader>sd",
+					},
+				},
+				require("nvim-treesitter.configs").setup({
+					textobjects = {
+						select = {
+							enable = true,
 
               -- Automatically jump forward to textobj, similar to targets.vim
               lookahead = true,
@@ -90,8 +90,8 @@ return {
 	},
 	{
 		-- Treesitter Keybinds
-		vim.keymap.set("n", "<leader>tt", vim.treesitter.inspect_tree, { desc = "show tree" }),
-		vim.keymap.set("n", "<leader>tc", ":=vim.treesitter.get_captures_at_cursor()<cr>", { desc = "show capture" }),
-		vim.keymap.set("n", "<leader>tn", ":=vim.treesitter.get_node()<cr>", { desc = "show node" }),
+		vim.keymap.set("n", "<leader>tst", vim.treesitter.inspect_tree, { desc = "show tree" }),
+		vim.keymap.set("n", "<leader>tsc", ":=vim.treesitter.get_captures_at_cursor()<cr>", { desc = "show capture" }),
+		vim.keymap.set("n", "<leader>tsn", ":=vim.treesitter.get_node()<cr>", { desc = "show node" }),
 	},
 }
