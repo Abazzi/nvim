@@ -12,6 +12,7 @@ return {
 			{ "<leader>n", group = "+files" },
 			{ "<leader>o", group = "+obsidian" },
 			{ "<leader>t", group = "+testing/treesitter" },
+			{ "<leader>f", group = "+DAP" },
 			{ "<leader>x", group = "+trouble" },
 			{ "<leader>r", group = "+refactoring" },
 			{ "<leader>s", group = "+split_window" },
