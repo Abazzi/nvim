@@ -21,6 +21,7 @@ return {
 
 		-- Add your own debuggers here
 	},
+	lazy = true,
 	config = function()
 		local dap = require("dap")
 		local dapui = require("dapui")
