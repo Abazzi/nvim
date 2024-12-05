@@ -32,5 +32,14 @@ vim.keymap.set("n", "<leader>Hcs", ":set conceallevel=0<cr>", { desc = "show/unc
 vim.keymap.set("n", "<leader>sv", "<cmd>:vs<cr>", { desc = "Split Window Vertically" })
 vim.keymap.set("n", "<leader>sh", "<cmd>:sp<cr>", { desc = "Split Window Horizontally" })
 
+-- Change Inside Word Keybind
+vim.keymap.set("n", "<C-c>", "ciw")
+
+-- Move multiple lines with Capitalized version of vim arrow keys
+vim.keymap.set("n", "H", "^")
+vim.keymap.set("n", "J", "6j")
+vim.keymap.set("n", "K", "6k")
+vim.keymap.set("n", "L", "$")
+
 -- Take Screenshot of code with nvim-silicon
 vim.keymap.set("v", "<leader>ss", "<cmd>Silicon<cr>", { desc = "Take Screenshot of Code" })
