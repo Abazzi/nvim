@@ -35,11 +35,11 @@ vim.keymap.set("n", "<leader>sh", "<cmd>:sp<cr>", { desc = "Split Window Horizon
 -- Change Inside Word Keybind
 vim.keymap.set("n", "<C-c>", "ciw")
 
+-- Move multiple lines with Capitalized version of vim arrow keys
+vim.keymap.set("n", "H", "^")
+vim.keymap.set("n", "J", "6j")
+vim.keymap.set("n", "K", "6k")
+vim.keymap.set("n", "L", "$")
+
 -- Take Screenshot of code with nvim-silicon
 vim.keymap.set("v", "<leader>ss", "<cmd>Silicon<cr>", { desc = "Take Screenshot of Code" })
-
--- Navigate with the Treewalker plugin
-vim.api.nvim_set_keymap("n", "H", ":Treewalker Left<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "J", ":Treewalker Down<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "K", ":Treewalker Up<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "L", ":Treewalker Right<CR>", { noremap = true })
