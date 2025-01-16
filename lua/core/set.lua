@@ -1,5 +1,6 @@
 -- neovim global options
 vim.g.have_nerd_font = true
+vim.opt.background = "dark"
 
 -- neovim options
 vim.opt["guicursor"] = ""
