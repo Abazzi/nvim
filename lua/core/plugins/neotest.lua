@@ -4,6 +4,7 @@ return {
 		"marilari88/neotest-vitest",
 		"fredrikaverpil/neotest-golang",
 		"nvim-neotest/neotest-jest",
+		"nvim-neotest/nvim-nio",
 	},
 	opts = {
 		adapters = {

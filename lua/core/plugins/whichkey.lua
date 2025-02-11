@@ -6,14 +6,12 @@ return {
 		vim.o.timeoutlen = 300
 		local wk = require("which-key")
 		wk.add({
-			{ "<leader>f", group = "+telescope" },
 			{ "<leader>h", group = "+harpoon" },
 			{ "<leader>g", group = "+git" },
 			{ "<leader>H", group = "+help/debug/conceal" },
 			{ "<leader>n", group = "+files" },
 			{ "<leader>o", group = "+obsidian" },
 			{ "<leader>t", group = "+testing/treesitter" },
-			{ "<leader>f", group = "+DAP" },
 			{ "<leader>x", group = "+trouble" },
 			{ "<leader>r", group = "+refactoring" },
 			{ "<leader>s", group = "+split_window" },
