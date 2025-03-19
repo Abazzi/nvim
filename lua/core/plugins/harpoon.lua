@@ -1,5 +1,8 @@
 return {
   "ThePrimeagen/harpoon",
+  dependencies = {
+    "nvim-lua/plenary.nvim"
+  },
   -- Harpoon Keybinds
   vim.keymap.set("n", "<leader>hm", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", { desc = "Open Menu" }),
   vim.keymap.set("n", "<leader>ha", "<cmd>lua require('harpoon.mark').add_file()<cr>", { desc = "Add File" }),
