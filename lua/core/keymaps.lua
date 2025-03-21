@@ -15,13 +15,13 @@ vim.keymap.set("v", "p", '"_dP')
 vim.keymap.set("v", "J", [[:move '>+1<CR>gv=gv]], { silent = true })
 vim.keymap.set("v", "K", [[:move '<-2<CR>gv=gv]], { silent = true })
 vim.keymap.set({ "n" }, "<Leader>k", function()
-	vim.lsp.buf.signature_help()
+  vim.lsp.buf.signature_help()
 end, { silent = true, noremap = true, desc = "toggle signature" })
 
 -- Other file related keymaps
 vim.keymap.set("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
 vim.keymap.set({ "n" }, "<Leader>k", function()
-	vim.lsp.buf.signature_help()
+  vim.lsp.buf.signature_help()
 end, { silent = true, noremap = true, desc = "toggle signature" })
 
 --Help/Debug/Conceal keymaps
@@ -34,12 +34,3 @@ vim.keymap.set("n", "<leader>sh", "<cmd>:sp<cr>", { desc = "Split Window Horizon
 
 -- Change Inside Word Keybind
 vim.keymap.set("n", "<C-c>", "ciw")
-
--- Take Screenshot of code with nvim-silicon
-vim.keymap.set("v", "<leader>ss", "<cmd>Silicon<cr>", { desc = "Take Screenshot of Code" })
-
--- Navigate with the Treewalker plugin
-vim.api.nvim_set_keymap("n", "H", ":Treewalker Left<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "J", ":Treewalker Down<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "K", ":Treewalker Up<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "L", ":Treewalker Right<CR>", { noremap = true })
