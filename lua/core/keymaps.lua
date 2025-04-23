@@ -11,12 +11,22 @@ vim.keymap.set("n", "<leader>rw", vim.cmd.Ex)
 -- Paste without overwriting register
 vim.keymap.set("v", "p", '"_dP')
 
--- Move Selected lines up and down
-vim.keymap.set("v", "J", [[:move '>+1<CR>gv=gv]], { silent = true })
-vim.keymap.set("v", "K", [[:move '<-2<CR>gv=gv]], { silent = true })
-vim.keymap.set({ "n" }, "<Leader>k", function()
-  vim.lsp.buf.signature_help()
-end, { silent = true, noremap = true, desc = "toggle signature" })
+-- Move lines of text up and down
+-- Normal Mode
+vim.keymap.set("n", "<C-Down>", ":m .+1<CR>==")
+vim.keymap.set("n", "<C-Up>", ":m .-2<CR>==")
+-- Insert Mode
+vim.keymap.set("i", "<C-Down>", "<esc>:m .+1<CR>==gi")
+vim.keymap.set("i", "<C-Up>", "<esc>:m .-2<CR>==gi")
+-- Visual Mode
+vim.keymap.set("v", "<C-Down>", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "<C-Up>", ":m '<-2<CR>gv=gv")
+
+-- search within visual selection - this is magic
+vim.keymap.set("x", "/", "<Esc>/\\%V")
+
+-- Duplicate line and comment the first line. I use it all the time while coding.
+vim.keymap.set("n", "ycc", "yygccp", { remap = true })
 
 -- Other file related keymaps
 vim.keymap.set("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
