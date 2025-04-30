@@ -12,7 +12,12 @@ return {
     dim = { enabled = true },
     indent = { enabled = true },
     profiler = { enabled = true },
-    picker = { enabled = true },
+    picker = {
+      enabled = true,
+      filter = {
+        cwd = true
+      }
+    },
     words = { enabled = true },
   },
   keys = {
