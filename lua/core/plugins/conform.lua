@@ -12,7 +12,12 @@ return {
       json = { "prettier" },
       css = { "prettier" },
       html = { "prettier" },
-    }
+    },
+    format_on_save = {
+    -- These options will be passed to conform.format()
+    timeout_ms = 500,
+    lsp_format = "fallback",
+    },
   },
   config = function(_, opts)
     local conform = require("conform")
